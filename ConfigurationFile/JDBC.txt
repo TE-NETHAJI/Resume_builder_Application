@@ -1,0 +1,72 @@
+com.mysql.cj.jdbc.Driver
+
+jdbc:mysql://localhost:3306/employee?user=root&password=root
+
+
+     public static void main(String[] args) throws Exception {  
+                 Class.forName("oracle.jdbc.driver.OracleDriver");  
+      
+    //Creating and Executing RowSet  
+        JdbcRowSet rowSet = RowSetProvider.newFactory().createJdbcRowSet();  
+        rowSet.setUrl("jdbc:oracle:thin:@localhost:1521:xe");  
+        rowSet.setUsername("system");  
+        rowSet.setPassword("oracle");  
+                   
+        rowSet.setCommand("select * from emp400");  
+        rowSet.execute();  
+
+
+
+h2 db
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+
+<servlet>   
+  <servlet-name>anyName</servlet-name>
+  <jsp-file>fileName.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>anyName</servlet-name>
+  <url-pattern>/youruri</url-pattern>
+</servlet-mapping>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	
+	<bean id="fam" class="com.te.springboot.extra.Family" autowire="constructor">
+		<constructor-arg name="id" value="10" />
+		<constructor-arg  name="name" value="Praveen"/>
+	</bean>
+	
+	<bean id="siblings" class="com.te.springboot.extra.Siblings">
+		<constructor-arg name="name" value="Balaji" />
+		<constructor-arg name="relation"  value="Brother"/>
+	</bean>
+	
+<!-- 	<bean id="fam" class="com.te.springboot.extra.Family" autowire="byType" >
+			<property name="id" value="100" />
+			<property name="name" value="Nethaji" />
+			<property name="Siblings" value="siblings" />
+		
+	</bean>
+	
+	<bean id="siblings" class="com.te.springboot.extra.Siblings">
+		<property name="name" value="Balaji"/>
+		<property name="relation"  value="Brother"/>
+	</bean> -->
+	
+		
+	</beans>

@@ -1,0 +1,25 @@
+dependency for servelets
+
+1.mysql connector
+2.lombok
+3.hinernate core
+4.entitymanager
+4.javax servelet
+//5.Add external jar mysql connector
+
+//spring mvc
+
+1.lombok
+sql connector
+2.spring core
+3.javax servlet
+4spring context
+4.hibernate core and emanager
+5.spring mvc
+6.spring orm
+
+//boot restfull
+1.spring web
+2.driver
+3.lombok
+4.datajpa
